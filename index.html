@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mousa Karim El Masry!</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #6c5ce7, #74b9ff, #81ecec);
+    color: #fff;
+  }
+
+  .sky {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 35px 18px 60px;
+  }
+
+  /* =========================
+     STARS
+     ========================= */
+
+  .stars,
+  .stars::before,
+  .stars::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,.9) 1.5px, transparent 1.8px),
+      radial-gradient(circle, rgba(255,255,255,.7) 1px, transparent 1.3px);
+    background-size: 90px 90px, 55px 55px;
+    background-position: 10px 15px, 30px 45px;
+    animation: drift 18s linear infinite;
+    pointer-events: none;
+  }
+
+  .stars::before {
+    animation-duration: 28s;
+    opacity: .45;
+    transform: scale(1.2);
+  }
+
+  .stars::after {
+    animation-duration: 35s;
+    opacity: .3;
+    transform: scale(1.4);
+  }
+
+  @keyframes drift {
+    to {
+      transform: translateY(90px);
+    }
+  }
+
+  /* =========================
+     MAIN CONTENT
+     ========================= */
+
+  .content {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+
+  /* =========================
+     FLAGS
+     ========================= */
+
+  .flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 5px 0 22px;
+    animation: pop .9s ease-out;
+  }
+
+  .flag-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-weight: bold;
+  }
+
+  .flag {
+    width: 115px;
+    height: 70px;
+    border: 3px solid rgba(255,255,255,.9);
+    border-radius: 9px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.2);
+  }
+
+  /* Egyptian Flag */
+
+  .egypt {
+    background:
+      linear-gradient(
+        to bottom,
+        #ce1126 0 33.33%,
+        #fff 33.33% 66.66%,
+        #000 66.66%
+      );
+    position: relative;
+  }
+
+  .egypt::after {
+    content: "★";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -52%);
+    color: #c9a227;
+    font-size: 25px;
+    text-shadow: 0 0 1px #8c6d00;
+  }
+
+  /* Belgian Flag */
+
+  .belgium {
+    background:
+      linear-gradient(
+        to right,
+        #000 0 33.33%,
+        #f9d616 33.33% 66.66%,
+        #ef3340 66.66%
+      );
+  }
+
+  /* =========================
+     BIRTHDAY TITLE
+     ========================= */
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.8rem, 9vw, 6.5rem);
+    line-height: .95;
+
+    text-shadow:
+      0 7px 0 rgba(0,0,0,.12),
+      0 0 30px rgba(255,255,255,.25);
+
+    animation: bounce 2.2s infinite;
+  }
+
+  .name {
+    margin: 18px 0 10px;
+
+    font-size: clamp(2rem, 6vw, 4.3rem);
+
+    font-weight: 900;
+
+    color: #ffeaa7;
+
+    text-shadow:
+      0 4px 0 #e17055,
+      0 0 22px rgba(255,234,167,.55);
+  }
+
+  .subtitle {
+    font-size: clamp(1.05rem, 3vw, 1.5rem);
+    margin: 0 auto 25px;
+  }
+
+  /* =========================
+     CARD
+     ========================= */
+
+  .card {
+    background: rgba(255,255,255,.16);
+
+    border: 2px solid rgba(255,255,255,.35);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 30px;
+
+    padding: 28px 20px;
+
+    box-shadow:
+      0 20px 60px rgba(31,38,135,.3);
+  }
+
+  /* =========================
+     CAKE
+     ========================= */
+
+  .cake {
+    position: relative;
+
+    width: 180px;
+    height: 145px;
+
+    margin: 20px auto 12px;
+
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .cake .base {
+    position: absolute;
+
+    bottom: 8px;
+    left: 15px;
+
+    width: 150px;
+    height: 72px;
+
+    background: linear-gradient(#ff9ff3,#f368e0);
+
+    border-radius: 12px 12px 22px 22px;
+
+    box-shadow:
+      inset 0 -10px rgba(0,0,0,.08);
+  }
+
+  .cake .icing {
+    position: absolute;
+
+    top: 55px;
+    left: 15px;
+
+    width: 150px;
+    height: 28px;
+
+    background: #fff;
+
+    border-radius: 14px 14px 18px 18px;
+  }
+
+  .candle {
+    position: absolute;
+
+    top: 15px;
+
+    width: 13px;
+    height: 48px;
+
+    border-radius: 5px;
+
+    background:
+      repeating-linear-gradient(
+        45deg,
+        #fff 0 7px,
+        #fd79a8 7px 14px
+      );
+  }
+
+  .c1 {
+    left: 65px;
+  }
+
+  .c2 {
+    left: 101px;
+  }
+
+  /* Flame */
+
+  .flame {
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    width: 17px;
+    height: 22px;
+
+    background: #ffeaa7;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform:
+      translateX(-50%)
+      rotate(45deg);
+
+    box-shadow:
+      0 0 18px #ffeaa7;
+
+    animation:
+      flicker .5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    to {
+      transform:
+        translateX(-50%)
+        rotate(45deg)
+        scale(1.18);
+    }
+  }
+
+  @keyframes float {
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounce {
+    50% {
+      transform:
+        translateY(-7px)
+        rotate(-1deg);
+    }
+  }
+
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(.7);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* =========================
+     MESSAGE
+     ========================= */
+
+  .message {
+    font-size: clamp(1.05rem, 3vw, 1.35rem);
+
+    line-height: 1.65;
+
+    margin: 10px auto 22px;
+
+    max-width: 720px;
+  }
+
+  /* =========================
+     BUTTON
+     ========================= */
+
+  button {
+    border: 0;
+
+    border-radius: 999px;
+
+    padding: 14px 25px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    color: #5f27cd;
+
+    background: #ffeaa7;
+
+    box-shadow:
+      0 7px 0 rgba(0,0,0,.15);
+
+    transition: .2s;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 10px 0 rgba(0,0,0,.15);
+  }
+
+  button:active {
+    transform: translateY(3px);
+
+    box-shadow:
+      0 4px 0 rgba(0,0,0,.15);
+  }
+
+  /* =========================
+     BALLOONS
+     ========================= */
+
+  .balloon {
+    position: fixed;
+
+    z-index: 2;
+
+    width: 48px;
+    height: 60px;
+
+    border-radius:
+      50% 50% 45% 45%;
+
+    bottom: -100px;
+
+    opacity: .9;
+
+    animation:
+      rise linear infinite;
+  }
+
+  .balloon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 80px;
+
+    background:
+      rgba(255,255,255,.7);
+
+    left: 50%;
+    top: 57px;
+  }
+
+  .b1 {
+    left: 5%;
+    background: #ff7675;
+    animation-duration: 9s;
+  }
+
+  .b2 {
+    left: 18%;
+    background: #ffeaa7;
+    animation-duration: 12s;
+    animation-delay: 3s;
+  }
+
+  .b3 {
+    left: 78%;
+    background: #55efc4;
+    animation-duration: 10s;
+    animation-delay: 1s;
+  }
+
+  .b4 {
+    left: 91%;
+    background: #a29bfe;
+    animation-duration: 13s;
+    animation-delay: 5s;
+  }
+
+  @keyframes rise {
+    from {
+      transform:
+        translateY(0)
+        rotate(-8deg);
+    }
+
+    to {
+      transform:
+        translateY(-125vh)
+        rotate(12deg);
+    }
+  }
+
+  /* =========================
+     CONFETTI
+     ========================= */
+
+  #confetti {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+  }
+
+  .confetti-piece {
+    position: absolute;
+
+    top: -20px;
+
+    width: 9px;
+    height: 16px;
+
+    animation:
+      fall 3.5s linear forwards;
+  }
+
+  @keyframes fall {
+    to {
+      transform:
+        translate3d(
+          var(--x),
+          110vh,
+          0
+        )
+        rotate(720deg);
+
+      opacity: .9;
+    }
+  }
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .footer {
+    margin-top: 18px;
+
+    font-size: .9rem;
+
+    opacity: .85;
+  }
+
+  .made-by {
+    margin-top: 8px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    opacity: .8;
+
+    letter-spacing: .3px;
+  }
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media (max-width: 520px) {
+
+    .flag {
+      width: 90px;
+      height: 55px;
+    }
+
+    .flags {
+      gap: 12px;
+    }
+
+    .card {
+      padding: 22px 14px;
+    }
+  }
+</style>
+</head>
+
+
+<body>
+
+<div class="sky">
+
+  <!-- Stars -->
+  <div class="stars"></div>
+
+  <!-- Balloons -->
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+  <div class="balloon b4"></div>
+
+  <!-- Confetti container -->
+  <div id="confetti"></div>
+
+
+  <main class="content">
+
+    <!-- =========================
+         FLAGS
+         ========================= -->
+
+    <div class="flags">
+
+      <div class="flag-wrap">
+
+        <div class="flag egypt"></div>
+
+        <span>
+          🇪🇬 Egypt
+        </span>
+
+      </div>
+
+
+      <div style="font-size:2rem">
+        ❤️
+      </div>
+
+
+      <div class="flag-wrap">
+
+        <div class="flag belgium"></div>
+
+        <span>
+          🇧🇪 Belgium
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         BIRTHDAY CARD
+         ========================= -->
+
+    <section class="card">
+
+      <h1>
+        🎉 HAPPY<br>
+        BIRTHDAY! 🎂
+      </h1>
+
+
+      <div class="name">
+        Mousa Karim El Masry
+      </div>
+
+
+      <p class="subtitle">
+        ⭐ Happy 7th Birthday, Superstar! ⭐
+      </p>
+
+
+      <!-- Cake -->
+
+      <div class="cake">
+
+        <div class="candle c1">
+          <div class="flame"></div>
+        </div>
+
+        <div class="candle c2">
+          <div class="flame"></div>
+        </div>
+
+        <div class="icing"></div>
+
+        <div class="base"></div>
+
+      </div>
+
+
+      <!-- Birthday Message -->
+
+      <p class="message">
+
+        🥳 In shaa' ALLAH your 7th year
+        be full of
+
+        <b>
+          adventures, laughter, games, surprises
+        </b>
+
+        and lots of wonderful memories! 🚀
+
+        <br>
+
+        Keep smiling, keep dreaming,
+        and keep being awesome! 🌟
+
+      </p>
+
+
+
+      <!-- Birthday music: keep happy-birthday.mp3 in the same folder as this HTML -->
+      <audio id="birthdayMusic" preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Surprise Button -->
+
+      <button onclick="celebrateAndPlay()">
+
+        🎁 CLICK FOR A BIRTHDAY SURPRISE! 🎁
+
+      </button>
+
+
+      <!-- Footer -->
+
+      <div class="footer">
+        Made with ❤️ for Mousa
+      </div>
+
+      <div class="made-by">
+        Made by Mahmoud Abulwafa — Father’s Friend
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+     ========================= -->
+
+<script>
+
+
+function celebrateAndPlay() {
+  const music = document.getElementById("birthdayMusic");
+
+  // Start/restart the song from the beginning.
+  music.currentTime = 0;
+  music.play().catch(error => {
+    console.log("Audio could not play:", error);
+  });
+
+  // Launch the birthday confetti at the same time.
+  celebrate();
+}
+
+function celebrate() {
+
+  const box =
+    document.getElementById("confetti");
+
+  box.innerHTML = "";
+
+  const symbols = [
+    "🎉",
+    "🎈",
+    "⭐",
+    "✨",
+    "🎂",
+    "🎁",
+    "🥳"
+  ];
+
+
+  for (let i = 0; i < 90; i++) {
+
+    const el =
+      document.createElement("div");
+
+    el.className =
+      "confetti-piece";
+
+
+    el.textContent =
+      symbols[
+        Math.floor(
+          Math.random() *
+          symbols.length
+        )
+      ];
+
+
+    el.style.left =
+      Math.random() * 100 + "vw";
+
+
+    el.style.fontSize =
+      (14 + Math.random() * 20) + "px";
+
+
+    el.style.setProperty(
+      "--x",
+      (Math.random() * 240 - 120) + "px"
+    );
+
+
+    el.style.animationDelay =
+      (Math.random() * 0.8) + "s";
+
+
+    box.appendChild(el);
+  }
+
+
+  setTimeout(() => {
+
+    box.innerHTML = "";
+
+  }, 5000);
+
+}
+
+
+</script>
+
+</body>
+</html>
